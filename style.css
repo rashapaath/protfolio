@@ -64,3 +64,22 @@ body{
 .profile{
     text-align:center;/*it will move inline elements contents(not element therefore the background colour wont move but its content that is here text move to center)to the center horizontally*/
 }
+.contactus{
+    margin-top:30px;/*add spcae alove contactus element*/
+    border-top:1px solid rgb(73, 72, 72);
+    padding-top:20px;
+    border-bottom:1px solid rgb(73, 72, 72);
+    padding-bottom:20px;
+}
+.label{
+    font-weight:500;
+    font-size:0.8rem;
+    color:#a0a0a0;
+}
+.value{
+    color:white;
+    text-decoration:none;/*to prevent anchor tag*/
+}
+.email,.phone{
+    margin-bottom:10px;
+}
