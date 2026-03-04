@@ -62,5 +62,5 @@ body{
        by giving inline block elements the the element will behave like inline but we can apply block proprties like margin padding etc*/
 }
 .profile{
-    text-align:center;/*it will move inline elements contents to the center*/
+    text-align:center;/*it will move inline elements contents(not element therefore the background colour wont move but its content that is here text move to center)to the center horizontally*/
 }
