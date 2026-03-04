@@ -1,99 +1,66 @@
 *{
     padding:0px;
     margin:0px;
-    box-sizing:border-box; 
+    box-sizing:border-box;/*two make  the content inside the tag (box)wont go or overflow outside of the box  * means this css we written applicable to all tags etc*/
 }
 body{
-    background-color:rgb(8, 8, 8);
+    background-color:#1e1e1e;
     font-family:sans-serif;
-    color:aliceblue;
+    color:#a0a0a0;
     line-height:1.6;
 }
 .outermost{
     display:grid;
     max-width:1200px;
+    /*why the height is not specified ..it is because to we dont know the exxact height because the sidebar have screen height but the maincontent div have very large height therefore we didnt mention height here*/
     grid-template-columns:350px 1fr;
     gap:40px;
     padding-top:40px;
-    margin:auto;
-    
+    margin:auto;/*it will make the element inside outermost  at center horizontally verticallym argin 0px   margin: 0 auto  make top and bottom 0px*/
 
 }
 .sidebar{
-    background-color:rgba(167, 166, 166, 0.258);
-    height:90vh;
-    border-radius:10%;
-    border:1px solid rgb(54, 53, 53);
-    padding:40px;
 
+    height:90vh;
+    background-color:#2a2a2a;
+    border:1px solid rgb(73, 72, 72);
+    border-radius:16px;/*OCCUR BASED on ratio so dont use percentageg (use onlu for making circle etc otherwise use px*/
+    padding:40px;
 }
 .maincontent{
-    background-color:rgba(167, 166, 166, 0.258);
-    border-radius:10%;
     height:90vh;
-    border:1px solid rgb(54, 53, 53);
+    background-color:#2a2a2a;
+    border:1px solid rgb(73, 72, 72);
+    border-radius:16px;;
+
 }
-/*profile section*/
-.profile{
-    text-align:center;
-}
-.profile img{
+#profilepic{
     height:120px;
     width:120px;
     border-radius:50%;
-    border:1px solid rgb(54, 53, 53);
+    border:1px solid rgb(73, 72, 72);
+
 }
 .profile h2{
     font-size:1.5rem;
     font-weight:700;
     margin-top:20px;
-
-
+    color:white;
 }
 .profile p{
-    display:inline-block;
-    padding:5px 15px;
-    background-color:rgb(20, 20, 20);
+    background-color:#1e1e1e;
     color:yellow;
-    border-radius:8px;
-    border:1px solid rgb(57, 55, 55);
-    font-size:.8rem;
+    border:1px solid rgb(73, 72, 72);
+    padding:5px 15px;
     margin-top:10px;
-}
-/*contact section*/
-.contactus{
-    margin-top:30px;
-    border-top:1px solid rgb(57, 55, 55);
-    border-bottom:1px solid rgb(57, 55, 55);
-    padding-top:20px;
-    padding-bottom:20px;
-}
-.grey{
-    font-weight:500;
     font-size:0.8rem;
-    color:rgb(159, 157, 157)
+    border-radius:8px;
+    display:inline-block;
+    /*without display:inline-bllock
+       the element(here profile p)is a block element therefore will take the fullwidth of its parent container..
+       by converting inline therefore the element behave like inline element and become only large as content inside
+       by giving inline block elements the the element will behave like inline but we can apply block proprties like margin padding etc*/
 }
-.white{
-    text-decoration: none;
-    color:aliceblue
-}
-.email,.contact,.location{
-    margin-bottom:12px;
-}
-/*link section*/
-.link{
-    margin-top:10px;
-    padding-top:0px;
-    padding-bottom:50px;
-    text-align:center;
-}
-.link img{
-    height:24px;
-    width:24px;
-    margin-left:6px;
-    filter:grayscale(1) invert(0.7);
-    transition: filter 0.3s ease;
-}
-.link img:hover{
-    filter:grayscale(0) invert(0);
+.profile{
+    text-align:center;/*it will move inline elements contents to the center*/
 }
