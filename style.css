@@ -17,21 +17,22 @@ body{
     gap:40px;
     padding-top:40px;
     margin:auto;/*it will make the element inside outermost  at center horizontally verticallym argin 0px   margin: 0 auto  make top and bottom 0px*/
+    min-height:100vh;
 
 }
 .sidebar{
-
-    height:90vh;
     background-color:#2a2a2a;
     border:1px solid rgb(73, 72, 72);
     border-radius:16px;/*OCCUR BASED on ratio so dont use percentageg (use onlu for making circle etc otherwise use px*/
     padding:40px;
 }
 .maincontent{
-    height:90vh;
+    min-height:90vh;/*if height mentioned inorder to make the height keep growing inorder to prevent stop height growth*/
     background-color:#2a2a2a;
     border:1px solid rgb(73, 72, 72);
-    border-radius:16px;;
+    border-radius:16px;
+    padding:40px;
+    flex:1;
 
 }
 #profilepic{
@@ -68,8 +69,7 @@ body{
     margin-top:30px;/*add spcae alove contactus element*/
     border-top:1px solid rgb(73, 72, 72);
     padding-top:20px;
-    border-bottom:1px solid rgb(73, 72, 72);
-    padding-bottom:20px;
+    
 }
 .label{
     font-weight:500;
@@ -82,4 +82,86 @@ body{
 }
 .email,.phone{
     margin-bottom:10px;
+}
+/*links*/
+.links{
+    margin-top:30px;
+    border-top:2px solid #3a3a3a;
+    padding-top:20px;
+    text-align:center;
+}
+.links img{
+    height:24px;
+    width:24px;
+    margin-left:5px;
+    filter:grayscale(1) invert(0.7);
+    transition:filter 0.3s ease;
+
+}
+.links img:hover{
+    filter:grayscale(0) invert(0);
+}
+/*main content*/
+/*nav*/
+#nav{
+padding:20px 40px;
+}
+nav{
+    display:flex;
+    justify-content:flex-end;
+    gap:20px;
+    border-bottom:2px solid #3a3a3a;
+    margin-bottom:20px;
+    padding-bottom:20px;
+
+}
+nav a{
+    text-decoration:none;
+    color:#a0a0a0;
+    font-weight:500;
+    transition:color 0.3s ease;
+    
+
+
+}
+.active,nav a:hover{
+    color:yellow;
+}
+
+.heading{
+    color:white;
+    
+    font-size:2rem;
+    margin-bottom:15px;
+}
+.line{
+    width:60px;
+    height:5px;
+    background-color:yellow;
+    margin-bottom:20px;
+}
+.content{
+    text-align:justify;
+}
+#about{
+    margin-bottom:30px;
+}
+/*skill section*/
+.content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:40px;
+}
+.item img{
+    height:48px;
+    width:48px;
+    filter:invert(75%) sepia(5%) saturate(10000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+}
+.item{
+    padding:20px;
+    border-radius:10px;
+    border:2px solid #3a3a3a;
+    background-color:#1e1e1e;
+    
+
 }
